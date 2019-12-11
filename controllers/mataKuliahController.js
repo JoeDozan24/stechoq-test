@@ -18,19 +18,19 @@ module.exports = {
     },
     
     editMataKuliah: function(req, res) {
-        mk.getById(req.conn, req.params.nim, function(err, rows) {
+        mk.getById(req.conn, req.params.kode_mata_kuliah, function(err, rows) {
             res.render("mata_kuliah/editMataKuliah", { data: rows[0] });
         });
     },
     
     update: function(req, res) {
-        mk.update(req.conn, req.body, req.params.id, function(err) {
+        mk.update(req.conn, req.body, req.params.kode_mata_kuliah, function(err) {
             res.redirect("/mataKuliah");
         })
     },
     
     removeMataKuliah: function(req, res) {
-        mk.delete(req.conn, req.params.id, function(err) {
+        mk.delete(req.conn, req.params.kode_mata_kuliah, function(err) {
             res.redirect("/mataKuliah");
         })
     }
