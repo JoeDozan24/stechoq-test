@@ -19,11 +19,11 @@ module.exports = {
     
     editDataMahasiswa: function(req, res) {
         mhs.getById(req.conn, req.params.nim, function(err, rows) {
-            res.render("mahasiswa/edit", { data: rows[0] });
+            res.render("mahasiswa/editMahasiswa", { data: rows[0] });
         });
     },
     
-    updateDataMahasiswa: function(req, res) {
+    update: function(req, res) {
         mhs.update(req.conn, req.body, req.params.id, function(err) {
             res.redirect("/mahasiswa");
         })
