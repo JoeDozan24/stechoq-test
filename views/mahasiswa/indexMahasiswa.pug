@@ -23,6 +23,6 @@ html
                     td #{row.tahun_masuk}
                     td #{row.kode_program_studi}
                     td
-                        form(action=`/mahasiswa/${row.id_biodata}?_method=DELETE`, method="post")
+                        form(action=`/mahasiswa/${row.nim}?_method=DELETE`, method="post")
                             input(type="submit", value="Hapus")
-                            a(href=`/mahasiswa/${row.id_biodata}/edit`) Ubah
+                            a(href=`/mahasiswa/${row.nim}/edit`) Ubah
