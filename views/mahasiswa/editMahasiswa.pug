@@ -2,7 +2,7 @@ html
     head
         title Ubah Data Mahasiswa
     body
-        form(action=`/mahasiswa/${data.id_biodata}?_method=PUT` method="post")
+        form(action=`/mahasiswa/${data.nim}?_method=PUT` method="post")
             label NIM
                 input(type="text" name="nim" value=data.nim)
                 br
