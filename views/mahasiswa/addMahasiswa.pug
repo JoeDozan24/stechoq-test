@@ -1,0 +1,24 @@
+html
+    head
+        title Registrasi Mahasiswa
+    body
+        form(action="/mahasiswa" method="post")
+            label NIM
+                input(type="text" name="nim")
+                br
+            label Nama
+                input(type="text" name="nama")
+                br
+            label Tanggal Lahir
+                input(type="date" name="tgl_lahir")
+                br
+            label Tempat Lahir
+                input(type="text" name="tempat_lahir")
+                br
+            label Tahun Masuk
+                input(type="text" name="tahun_masuk")
+                br
+            label Kode Program Studi
+                input(type="text" name="kode_program_studi")
+                br
+            input(type="submit" value="Register")

@@ -1,0 +1,24 @@
+html
+    head
+        title Ubah Data Mahasiswa
+    body
+        form(action=`/mahasiswa/${data.id_biodata}?_method=PUT` method="post")
+            label NIM
+                input(type="text" name="nim" value=data.nim)
+                br
+            label Nama
+                input(type="text" name="nama" value=data.nama)
+                br
+            label Tanggal Lahir
+                input(type="date" name="tanggal_lahir" value=data.tanggal_lahir)
+                br
+            label Tempat Lahir
+                input(type="text" name="tempat_lahir" value=data.tempat_lahir)
+                br
+            label Tahun Masuk
+                input(type="text" name="tahun_masuk" value=data.tahun_masuk)
+                br
+            label Kode_Program_Studi
+                input(type="text" name="kode_program_studi" value=data.kode_program_studi)
+                br
+            input(type="submit" value="Ubah Data")

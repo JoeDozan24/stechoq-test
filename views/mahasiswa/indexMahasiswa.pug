@@ -1,0 +1,28 @@
+html
+    head
+        title Data Mahasiswa
+    body
+        a(href="http://localhost:3000/mahasiswa/register") Tambah
+        table
+            tr
+                td no
+                td NIM
+                td nama
+                td Tanggal Lahir
+                td Tempat Lahir
+                td Tahun Masuk
+                td Kode Program Studi
+                td Action
+            for row, index in data
+                tr
+                    td #{index + 1}
+                    td #{row.nim}
+                    td #{row.nama}
+                    td #{row.tanggal_lahir}
+                    td #{row.tempat_lahir}
+                    td #{row.tahun_masuk}
+                    td #{row.kode_program_studi}
+                    td
+                        form(action=`/mahasiswa/${row.id_biodata}?_method=DELETE`, method="post")
+                            input(type="submit", value="Hapus")
+                            a(href=`/mahasiswa/${row.id_biodata}/edit`) Ubah
