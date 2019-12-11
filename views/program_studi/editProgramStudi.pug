@@ -1,0 +1,12 @@
+html
+    head
+        title Ubah Program Studi
+    body
+        form(action=`/programStudi/${data.kode_program_studi}?_method=PUT` method="post")
+            label Kode Program Studi
+                input(type="text" name="kode_program_studi" value=data.kode_program_studi)
+                br
+            label Nama Program Studi
+                input(type="text" name="nama" value=data.nama)
+                br
+            input(type="submit" value="Ubah Data")

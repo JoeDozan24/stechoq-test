@@ -1,0 +1,20 @@
+html
+    head
+        title Data Program Studi
+    body
+        a(href="http://localhost:3000/programStudi/register") Tambah Program Studi
+        table
+            tr
+                td No.
+                td Kode Program Studi
+                td Nama Program Studi
+                td Action
+            for row, index in data
+                tr
+                    td #{index + 1}
+                    td #{row.kode_program_studi}
+                    td #{row.nama}
+                    td
+                        form(action=`/programStudi/${row.kode_program_studi}?_method=DELETE`, method="post")
+                            input(type="submit", value="Hapus")
+                            a(href=`/programStudi/${row.kode_program_studi}/edit`) Ubah
