@@ -1,0 +1,18 @@
+html
+    head
+        title Ubah Mata Kuliah
+    body
+        form(action=`/mataKuliah/${data.kode_mata_kuliah}?_method=PUT` method="post")
+            label Kode Mata Kuliah
+                input(type="text" name="kode_mata_kuliah" value=data.kode_mata_kuliah)
+                br
+            label Nama Mata Kuliah
+                input(type="text" name="nama" value=data.nama)
+                br
+            label SKS
+                input(type="text" name="sks" value=data.sks)
+                br
+            label Kode Program Studi
+                input(type="text" name="kode_program_studi" value=data.kode_program_studi)
+                br
+            input(type="submit" value="Ubah Data")

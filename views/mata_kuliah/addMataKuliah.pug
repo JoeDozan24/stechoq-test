@@ -1,0 +1,18 @@
+html
+    head
+        title Tambah Mata Kuliah
+    body
+        form(action="/mataKuliah" method="post")
+            label Kode Mata Kuliah
+                input(type="text" name="kode_mata_kuliah")
+                br
+            label Nama Mata Kuliah
+                input(type="text" name="nama")
+                br
+            label SKS
+                input(type="text" name="sks")
+                br
+            label Kode Program Studi
+                input(type="text" name="kode_program_studi")
+                br
+            input(type="submit" value="Register")
