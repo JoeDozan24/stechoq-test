@@ -24,13 +24,13 @@ module.exports = {
     },
     
     update: function(req, res) {
-        mhs.update(req.conn, req.body, req.params.id, function(err) {
+        mhs.update(req.conn, req.body, req.params.nim, function(err) {
             res.redirect("/mahasiswa");
         })
     },
     
     removeMahasiswa: function(req, res) {
-        mhs.delete(req.conn, req.params.id, function(err) {
+        mhs.delete(req.conn, req.params.nim, function(err) {
             res.redirect("/mahasiswa");
         })
     }

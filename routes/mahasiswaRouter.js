@@ -6,7 +6,7 @@ router.get("/", mhsController.index);
 router.get("/register", mhsController.addMahasiswa);
 router.post("/", mhsController.store);
 router.get("/:nim/edit", mhsController.editDataMahasiswa);
-router.put("/:id", mhsController.update);
-router.delete("/:id", mhsController.removeMahasiswa);
+router.put("/:nim", mhsController.update);
+router.delete("/:nim", mhsController.removeMahasiswa);
 
 module.exports = router;
