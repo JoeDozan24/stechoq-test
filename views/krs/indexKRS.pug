@@ -19,7 +19,7 @@ html
                     td #{row.semester}
                     td #{row.kode_mata_kuliah}
                     td
-                        form(action=`/krs/${row.NIM}/${row.kode_mata-kuliah}/${row.tahun}/${row.semester}?_method=DELETE`, method="post")
+                        form(action=`/krs/${row.NIM}/${row.kode_mata_kuliah}/${row.tahun}/${row.semester}?_method=DELETE`, method="post")
                             input(type="submit", value="Hapus")
                         form(action=`/krs/nim/${row.NIM}`, method="get")
                             input(type="submit", value="Sort by NIM")
