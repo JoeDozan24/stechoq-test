@@ -1,5 +1,5 @@
 module.exports = {
     index: function(req, res) {
-        res.redirect("/mahasiswa");
+        res.render("root/root");
     }
 }
