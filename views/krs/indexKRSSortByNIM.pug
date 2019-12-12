@@ -1,0 +1,27 @@
+html
+    head
+        title Data KRS (#{data[0].NIM})
+    body
+        h1 #{data[0].NIM}
+        table
+            tr
+                td No.
+                td Tahun
+                td Semester
+                td Kode mata kuliah
+                td SKS
+                td Action
+            for row, index in data
+                tr
+                    td #{index + 1}
+                    td #{row.tahun}
+                    td #{row.semester}
+                    td #{row.kode_mata_kuliah}
+                    td #{row.sks}
+                    td
+                        form(action=`/krs/${row.NIM}/${row.kode_mata-kuliah}/${row.tahun}/${row.semester}?_method=DELETE`, method="post")
+                            input(type="submit", value="Hapus")
+                        form(action=`/krs/kmk/${row.kode_mata_kuliah}`, method="get")
+                            input(type="submit", value="Sort by Kode Mata Kuliah")
+        br
+        h4 Total SKS: #{total_sks}

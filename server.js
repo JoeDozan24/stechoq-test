@@ -23,12 +23,14 @@ app.use(methodOverride("_method"));
 const mhsRouter = require("./routes/mahasiswaRouter");
 const mataKuliahRouter = require("./routes/mataKuliahRouter");
 const programStudiRouter = require("./routes/programStudiRouter");
+const krsRouter = require("./routes/krsRouter");
 const rootRouter = require("./routes/rootRouter");
 
 //Routing
 app.use("/mahasiswa", mhsRouter);
 app.use("/mataKuliah", mataKuliahRouter);
 app.use("/programStudi", programStudiRouter);
+app.use("/krs", krsRouter);
 app.use("/", rootRouter);
 
 //Start Server

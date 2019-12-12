@@ -1,0 +1,27 @@
+html
+    head
+        title Data KRS (Semua Mahasiswa)
+    body
+        a(href="http://localhost:3000/krs/register") Tambah KRS [Placeholder]
+        table
+            tr
+                td No.
+                td NIM
+                td Tahun
+                td Semester
+                td Kode mata kuliah
+                td Action
+            for row, index in data
+                tr
+                    td #{index + 1}
+                    td #{row.NIM}
+                    td #{row.tahun}
+                    td #{row.semester}
+                    td #{row.kode_mata_kuliah}
+                    td
+                        form(action=`/krs/${row.NIM}/${row.kode_mata-kuliah}/${row.tahun}/${row.semester}?_method=DELETE`, method="post")
+                            input(type="submit", value="Hapus")
+                        form(action=`/krs/nim/${row.NIM}`, method="get")
+                            input(type="submit", value="Sort by NIM")
+                        form(action=`/krs/kmk/${row.kode_mata_kuliah}`, method="get")
+                            input(type="submit", value="Sort by Kode Mata Kuliah")
