@@ -8,5 +8,6 @@ router.post("/", programStudiController.store);
 router.get("/:kode_program_studi/edit", programStudiController.editProgramStudi);
 router.put("/:kode_program_studi", programStudiController.update);
 router.delete("/:kode_program_studi", programStudiController.removeProgramStudi);
+router.get("/:kode_program_studi", programStudiController.sortMataKuliahByProgramStudi);
 
 module.exports = router;

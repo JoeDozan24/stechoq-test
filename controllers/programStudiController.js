@@ -14,7 +14,7 @@ module.exports = {
     store: function(req, res) {
         ps.create(req.conn, req.body, function(err) {
             res.redirect("/programStudi")
-        })
+        });
     },
     
     editProgramStudi: function(req, res) {
@@ -26,12 +26,18 @@ module.exports = {
     update: function(req, res) {
         ps.update(req.conn, req.body, req.params.kode_program_studi, function(err) {
             res.redirect("/programStudi");
-        })
+        });
     },
     
     removeProgramStudi: function(req, res) {
         ps.delete(req.conn, req.params.kode_program_studi, function(err) {
             res.redirect("/programStudi");
-        })
+        });
+    },
+    
+    sortMataKuliahByProgramStudi: function(req, res) {
+        ps.sortMataKuliahByProgramStudi(req.conn, req.params.kode_program_studi, function(err, rows) {
+            res.render("program_studi/indexProgramStudiSortMataKuliah", { data: rows });
+        });
     }
 };

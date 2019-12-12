@@ -17,5 +17,9 @@ module.exports = {
     
     delete: function(conn, id, callback) {
         conn.query("DELETE FROM program_studi WHERE kode_program_studi = '" + id + "'", callback)
+    },
+    
+    sortMataKuliahByProgramStudi: function(conn, id, callback) {
+        conn.query("SELECT * FROM mata_kuliah WHERE kode_program_studi = '" + id + "'", callback);
     }
 }

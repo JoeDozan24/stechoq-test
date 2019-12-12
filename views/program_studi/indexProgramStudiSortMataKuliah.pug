@@ -1,0 +1,23 @@
+html
+    head
+        title Data Program Studi
+    body
+        a(href="http://localhost:3000/programStudi/") << Back
+        h1 Kode Program Studi: #{data[0].kode_program_studi}
+        table
+            tr
+                td No.
+                td Kode Mata Kuliah
+                td Nama Mata Kuliah
+                td SKS
+                td Action
+            for row, index in data
+                tr
+                    td #{index + 1}
+                    td #{row.kode_mata_kuliah}
+                    td #{row.nama}
+                    td #{row.sks}
+                    td
+                        form(action=`/mataKuliah/${row.kode_mata_kuliah}?_method=DELETE`, method="post")
+                            input(type="submit", value="Hapus")
+                            a(href=`/mataKuliah/${row.kode_mata_kuliah}/edit`) Ubah
